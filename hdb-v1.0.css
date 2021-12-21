@@ -19,6 +19,7 @@
   content: "50%";
   color: rgba(51,153,255,.5)
 }
-#torrent-list tbody tr button {
+#torrent-list tbody tr td button,
+#torrent-list tbody tr td:hover button {
   display: none;
 }
