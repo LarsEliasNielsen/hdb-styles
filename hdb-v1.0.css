@@ -27,8 +27,14 @@
 #torrent-list td:hover button.tvdb_button {
   display: none;
 }
-.tag.internal {
+#torrent-list .tag.internal {
   background-color: rgb(255, 213, 107);
   color: rgb(0, 0, 0);
   font-weight: 700;
+}
+#torrent-list a.fl {
+  color: rgb(51, 153, 255);
+}
+#torrent-list a.internal {
+  color: rgb(255, 213, 107);
 }
