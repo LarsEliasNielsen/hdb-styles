@@ -20,6 +20,6 @@
   color: rgba(51,153,255,.5)
 }
 #torrent-list tbody tr td button,
-#torrent-list tbody tr td:hover button {
+#torrent-list td:hover button.tvdb_button {
   display: none;
 }
