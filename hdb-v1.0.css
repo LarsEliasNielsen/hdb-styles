@@ -19,4 +19,6 @@
   content: "50%";
   color: rgba(51,153,255,.5)
 }
-
+#torrent-list tbody tr button {
+  display: none;
+}
