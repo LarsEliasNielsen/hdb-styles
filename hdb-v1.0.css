@@ -1,0 +1,21 @@
+#torrent-list a.fl::after,
+#torrent-list a[title^="25%"]::after,
+#torrent-list a[title^="50%"]::after {
+  float: right;
+  font-size: 10px;
+  width: 34px;
+  text-align: center;
+  pointer-events: none
+}
+#torrent-list a.fl::after {
+  content: "FREE";
+  color: #39f
+}
+#torrent-list a[title^="25%"]::after {
+  content: "75%";
+  color: rgba(51,153,255,.75)
+}
+#torrent-list a[title^="50%"]::after {
+  content: "50%";
+  color: rgba(51,153,255,.5)
+}
