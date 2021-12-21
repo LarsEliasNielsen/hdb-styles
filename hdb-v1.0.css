@@ -7,17 +7,20 @@
   text-align: center;
   pointer-events: none
 }
+#torrent-list {
+  width: 90%
+}
 #torrent-list a.fl::after {
   content: "FREE";
-  color: #39f
+  color: rgba(51, 153, 255, 1)
 }
 #torrent-list a[title^="25%"]::after {
   content: "75%";
-  color: rgba(51,153,255,.75)
+  color: rgba(51, 153, 255, .75)
 }
 #torrent-list a[title^="50%"]::after {
   content: "50%";
-  color: rgba(51,153,255,.5)
+  color: rgba(51, 153, 255, .5)
 }
 #torrent-list tbody tr td button,
 #torrent-list td:hover button.tvdb_button {
