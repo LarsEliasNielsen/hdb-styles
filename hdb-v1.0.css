@@ -23,6 +23,30 @@
   height: 14px;
 }
 
+/* Menu */
+.menu {
+  table-layout: fixed;
+  height: 30px
+}
+.menu tbody tr td:nth-child(2),
+.menu tbody tr td:nth-child(3) {
+  width: 15%;
+}
+.menu td.menunavigation_new {
+  background: none;
+}
+.menu td.menunavigation_new:hover {
+  background: linear-gradient(to bottom,#93b6e6 0,#a8cdf0 50%,#72b5ec 50%,#92dbfd 100%);
+}
+.menu td.menunavigation_new a::after {
+  content: " [New]";
+  color: var(--freeleechColor);
+  font-size: 10px;
+  text-align: center;
+  pointer-events: none;
+  margin-left: 5px;
+}
+
 /* Browse */
 #torrent-list a.fl::after,
 #torrent-list a[title^="25%"]::after,
