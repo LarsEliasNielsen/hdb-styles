@@ -1,5 +1,5 @@
 :root {
-  --torrentTitleColor: rgb(145, 145, 145);
+  --torrentTitleColor: rgb(120, 120, 120);
   --freeleechColor: rgb(47, 72, 121);
   --freeleech75Color: rgba(47, 72, 121, .75);
   --freeleech50Color: rgba(47, 72, 121, .5);
@@ -31,6 +31,10 @@
   content: "50%";
   color: var(--freeleech50Color);
 }
+#torrent-list a[title^="Neutral Leech"] {
+  content: "50%";
+  color: var(--torrentTitleColor);
+}
 #torrent-list tbody tr td button,
 #torrent-list td:hover button.tvdb_button {
   display: none;
@@ -39,9 +43,6 @@
   background-color: var(--internalColor);
   color: rgb(255, 255, 255);
   font-weight: 700;
-}
-#torrent-list a:link, a:visited {
-  color: var(--torrentTitleColor);
 }
 #torrent-list a.fl {
   color: var(--freeleechColor);
