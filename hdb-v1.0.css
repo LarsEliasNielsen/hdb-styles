@@ -1,3 +1,11 @@
+:root {
+  --torrentTitleColor: rgb(145, 145, 145);
+  --freeleechColor: rgb(47, 72, 121);
+  --freeleech75Color: rgba(47, 72, 121, .75);
+  --freeleech50Color: rgba(47, 72, 121, .5);
+  --internalColor: rgb(208, 119, 40);
+}
+
 /* Browse */
 #torrent-list a.fl::after,
 #torrent-list a[title^="25%"]::after,
@@ -13,28 +21,31 @@
 }
 #torrent-list a.fl::after {
   content: "FREE";
-  color: rgb(51, 153, 255);
+  color: var(--freeleechColor);
 }
 #torrent-list a[title^="25%"]::after {
   content: "75%";
-  color: rgba(51, 153, 255, .75);
+  color: var(--freeleech75Color);
 }
 #torrent-list a[title^="50%"]::after {
   content: "50%";
-  color: rgba(51, 153, 255, .5);
+  color: var(--freeleech50Color);
 }
 #torrent-list tbody tr td button,
 #torrent-list td:hover button.tvdb_button {
   display: none;
 }
 #torrent-list .tag.internal {
-  background-color: rgb(255, 213, 107);
-  color: rgb(0, 0, 0);
+  background-color: var(--internalColor);
+  color: rgb(255, 255, 255);
   font-weight: 700;
 }
+#torrent-list a:link, a:visited {
+  color: var(--torrentTitleColor);
+}
 #torrent-list a.fl {
-  color: rgb(51, 153, 255);
+  color: var(--freeleechColor);
 }
 #torrent-list a.internal {
-  color: rgb(255, 213, 107);
+  color: var(--internalColor);
 }
