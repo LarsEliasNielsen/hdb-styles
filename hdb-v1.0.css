@@ -60,6 +60,10 @@
 #torrent-list {
   width: 90%;
 }
+#torrent-list thead {
+  position: sticky;
+  top: 0;
+}
 #torrent-list a.fl::after {
   content: "FREE";
   color: var(--freeleechColor);
