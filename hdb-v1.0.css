@@ -59,13 +59,16 @@
 }
 #torrent-list {
   width: 90%;
+  border-collapse: initial;
 }
 #torrent-list thead {
   position: sticky;
   top: 0;
 }
 #torrent-list td {
-    padding: 8px;
+  padding: 8px;
+  border: none;
+  border-bottom: solid #000 1px;
 }
 #torrent-list a.fl::after {
   content: "FREE";
