@@ -65,8 +65,11 @@
   position: sticky;
   top: 0;
 }
+#torrent-list th,
 #torrent-list td {
   padding: 8px;
+}
+#torrent-list td {
   border: none;
   border-bottom: solid #000 1px;
 }
