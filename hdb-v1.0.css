@@ -174,3 +174,10 @@
 #torrent-list td.catcell .medium6:after {
   content: "Web-DL";
 }
+/**
+ * TODO: handle combinations
+ * .codec1 > .medium3 = H.264, Encode aka x264, Encode
+ * .codec5 > .medium3 = HEVC, Encode aka x265, Encode
+ * .codec5 > .medium6 = Web-DL, HEVC
+ * .codec5 > .medium4 = Capture, HEVC
+ */
