@@ -113,3 +113,47 @@
 #torrent-list a.internal {
   color: var(--internalColor);
 }
+/* Categories */
+#torrent-list td.catcell a {
+  text-decoration: none;
+}
+#torrent-list td.catcell .category1,
+#torrent-list td.catcell .category2,
+#torrent-list td.catcell .category3,
+#torrent-list td.catcell .category6,
+#torrent-list td.catcell .category7 {
+  background-image: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#torrent-list td.catcell .category1:after,
+#torrent-list td.catcell .category2:after,
+#torrent-list td.catcell .category3:after,
+#torrent-list td.catcell .category6:after,
+#torrent-list td.catcell .category7:after {
+  font-weight: bold;
+  padding: 1px 3px 2px 3px;
+  border-radius: 3px;
+  color: white;
+}
+#torrent-list td.catcell .category1:after {
+  content: "Movie";
+  background-color: orange;
+}
+#torrent-list td.catcell .category2:after {
+  content: "TV";
+  background-color: green;
+}
+#torrent-list td.catcell .category3:after {
+  content: "Docu";
+  background-color: darkcyan;
+}
+#torrent-list td.catcell .category6:after {
+  content: "Audio";
+  background-color: purple;
+}
+#torrent-list td.catcell .category7:after {
+  content: "XXX";
+  background-color: crimson;
+}
