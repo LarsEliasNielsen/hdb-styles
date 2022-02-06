@@ -114,6 +114,12 @@
   color: var(--internalColor);
 }
 /* Categories */
+#torrent-list td.catcell {
+  float: left;
+}
+#torrent-list td:nth-child(3) {
+  width: 100%;
+}
 #torrent-list td.catcell a {
   text-decoration: none;
 }
@@ -156,4 +162,15 @@
 #torrent-list td.catcell .category7:after {
   content: "XXX";
   background-color: crimson;
+}
+/* Codec */
+#torrent-list td.catcell .medium1,
+#torrent-list td.catcell .medium6 {
+  background-image: none;
+}
+#torrent-list td.catcell .medium1:after {
+  content: "Blu-ray";
+}
+#torrent-list td.catcell .medium6:after {
+  content: "Web-DL";
 }
