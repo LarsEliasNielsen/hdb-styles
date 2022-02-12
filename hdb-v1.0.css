@@ -222,3 +222,10 @@
 #torrent-list td.catcell#codec5:before {
   content: "HEVC";
 }
+/* Links */
+#torrent-list td .js-download,
+#torrent-list td .js-bookmarkadd,
+#torrent-list td .js-wishlistadd,
+#torrent-list td .genres {
+  display: none;
+}
