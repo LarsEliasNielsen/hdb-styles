@@ -53,8 +53,6 @@
 #torrent-list a[title^="50%"]::after {
   float: right;
   font-size: 10px;
-  width: 34px;
-  text-align: center;
   pointer-events: none;
 }
 #torrent-list {
@@ -71,6 +69,19 @@
 }
 #torrent-list td {
   border: none;
+}
+#torrent-list td:nth-child(3) {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+#torrent-list td:nth-child(3) b {
+  order: 0;
+  flex: 1 0 100%;
+}
+#torrent-list td:nth-child(3) .tag.new,
+#torrent-list td:nth-child(3) a[href="/browse.php?origin=1"] {
+  height: 100%;
 }
 #torrent-list a.fl::after {
   content: "FREE";
@@ -113,13 +124,6 @@
   color: var(--internalColor);
 }
 /* Categories */
-#torrent-list td.catcell {
-  float: left;
-  margin: 3px;
-}
-#torrent-list td:nth-child(3) {
-  width: 100%;
-}
 #torrent-list td.catcell a {
   text-decoration: none;
 }
@@ -195,13 +199,6 @@
 #torrent-list td.catcell .medium6:after {
   content: "Web-DL";
 }
-/**
- * TODO: handle combinations
- * .codec1 > .medium3 = H.264, Encode aka x264, Encode
- * .codec5 > .medium3 = HEVC, Encode aka x265, Encode
- * .codec5 > .medium6 = Web-DL, HEVC
- * .codec5 > .medium4 = Capture, HEVC
- */
 /* Codec */
 #torrent-list td.catcell#codec1,
 #torrent-list td.catcell#codec3,
@@ -209,9 +206,6 @@
   background-image: none;
   text-align: center;
   height: auto;
-  background-color: darkgray;
-  border-radius: 3px;
-  border: none;
 }
 #torrent-list td.catcell#codec1:before {
   content: "H.264";
