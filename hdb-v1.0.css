@@ -71,7 +71,6 @@
 }
 #torrent-list td {
   border: none;
-  border-bottom: solid #000 1px;
 }
 #torrent-list a.fl::after {
   content: "FREE";
@@ -116,6 +115,7 @@
 /* Categories */
 #torrent-list td.catcell {
   float: left;
+  margin: 3px;
 }
 #torrent-list td:nth-child(3) {
   width: 100%;
@@ -126,16 +126,19 @@
 #torrent-list td.catcell .category1,
 #torrent-list td.catcell .category2,
 #torrent-list td.catcell .category3,
+#torrent-list td.catcell .category4,
+#torrent-list td.catcell .category5,
 #torrent-list td.catcell .category6,
 #torrent-list td.catcell .category7 {
   background-image: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  height: auto;
 }
 #torrent-list td.catcell .category1:after,
 #torrent-list td.catcell .category2:after,
 #torrent-list td.catcell .category3:after,
+#torrent-list td.catcell .category4:after,
+#torrent-list td.catcell .category5:after,
 #torrent-list td.catcell .category6:after,
 #torrent-list td.catcell .category7:after {
   font-weight: bold;
@@ -155,6 +158,14 @@
   content: "Docu";
   background-color: darkcyan;
 }
+#torrent-list td.catcell .category4:after {
+  content: "Music";
+  background-color: mediumpurple;
+}
+#torrent-list td.catcell .category5:after {
+  content: "Sport";
+  background-color: darkslategray;
+}
 #torrent-list td.catcell .category6:after {
   content: "Audio";
   background-color: purple;
@@ -163,13 +174,23 @@
   content: "XXX";
   background-color: crimson;
 }
-/* Codec */
+/* Medium */
 #torrent-list td.catcell .medium1,
+#torrent-list td.catcell .medium3,
+#torrent-list td.catcell .medium5,
 #torrent-list td.catcell .medium6 {
   background-image: none;
+  text-align: center;
+  height: auto;
 }
 #torrent-list td.catcell .medium1:after {
   content: "Blu-ray";
+}
+#torrent-list td.catcell .medium3:after {
+  content: "Encode";
+}
+#torrent-list td.catcell .medium5:after {
+  content: "Remux";
 }
 #torrent-list td.catcell .medium6:after {
   content: "Web-DL";
@@ -181,3 +202,23 @@
  * .codec5 > .medium6 = Web-DL, HEVC
  * .codec5 > .medium4 = Capture, HEVC
  */
+/* Codec */
+#torrent-list td.catcell#codec1,
+#torrent-list td.catcell#codec3,
+#torrent-list td.catcell#codec5 {
+  background-image: none;
+  text-align: center;
+  height: auto;
+  background-color: darkgray;
+  border-radius: 3px;
+  border: none;
+}
+#torrent-list td.catcell#codec1:before {
+  content: "H.264";
+}
+#torrent-list td.catcell#codec3:before {
+  content: "VC-1";
+}
+#torrent-list td.catcell#codec5:before {
+  content: "HEVC";
+}
