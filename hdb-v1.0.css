@@ -53,8 +53,6 @@
 #torrent-list a[title^="50%"]::after {
   float: right;
   font-size: 10px;
-  width: 34px;
-  text-align: center;
   pointer-events: none;
 }
 #torrent-list {
@@ -71,7 +69,20 @@
 }
 #torrent-list td {
   border: none;
-  border-bottom: solid #000 1px;
+}
+#torrent-list td:nth-child(3) {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+#torrent-list td:nth-child(3) b {
+  order: 0;
+  flex: 1 0 100%;
+}
+#torrent-list td:nth-child(3) .tag.new,
+#torrent-list td:nth-child(3) a[href="/browse.php?origin=1"] {
+  height: 100%;
 }
 #torrent-list a.fl::after {
   content: "FREE";
@@ -120,16 +131,19 @@
 #torrent-list td.catcell .category1,
 #torrent-list td.catcell .category2,
 #torrent-list td.catcell .category3,
+#torrent-list td.catcell .category4,
+#torrent-list td.catcell .category5,
 #torrent-list td.catcell .category6,
 #torrent-list td.catcell .category7 {
   background-image: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  height: auto;
 }
 #torrent-list td.catcell .category1:after,
 #torrent-list td.catcell .category2:after,
 #torrent-list td.catcell .category3:after,
+#torrent-list td.catcell .category4:after,
+#torrent-list td.catcell .category5:after,
 #torrent-list td.catcell .category6:after,
 #torrent-list td.catcell .category7:after {
   font-weight: bold;
@@ -149,6 +163,14 @@
   content: "Docu";
   background-color: darkcyan;
 }
+#torrent-list td.catcell .category4:after {
+  content: "Music";
+  background-color: mediumpurple;
+}
+#torrent-list td.catcell .category5:after {
+  content: "Sport";
+  background-color: darkslategray;
+}
 #torrent-list td.catcell .category6:after {
   content: "Audio";
   background-color: purple;
@@ -156,4 +178,49 @@
 #torrent-list td.catcell .category7:after {
   content: "XXX";
   background-color: crimson;
+}
+/* Medium */
+#torrent-list td.catcell .medium1,
+#torrent-list td.catcell .medium3,
+#torrent-list td.catcell .medium5,
+#torrent-list td.catcell .medium6 {
+  background-image: none;
+  text-align: center;
+  height: auto;
+}
+#torrent-list td.catcell .medium1:after {
+  content: "Blu-ray";
+}
+#torrent-list td.catcell .medium3:after {
+  content: "Encode";
+}
+#torrent-list td.catcell .medium5:after {
+  content: "Remux";
+}
+#torrent-list td.catcell .medium6:after {
+  content: "Web-DL";
+}
+/* Codec */
+#torrent-list td.catcell#codec1,
+#torrent-list td.catcell#codec3,
+#torrent-list td.catcell#codec5 {
+  background-image: none;
+  text-align: center;
+  height: auto;
+}
+#torrent-list td.catcell#codec1:before {
+  content: "H.264";
+}
+#torrent-list td.catcell#codec3:before {
+  content: "VC-1";
+}
+#torrent-list td.catcell#codec5:before {
+  content: "HEVC";
+}
+/* Links */
+#torrent-list td .js-download,
+#torrent-list td .js-bookmarkadd,
+#torrent-list td .js-wishlistadd,
+#torrent-list td .genres {
+  display: none;
 }
