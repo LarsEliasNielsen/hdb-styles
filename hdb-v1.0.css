@@ -134,7 +134,8 @@
 #torrent-list td.catcell .category4,
 #torrent-list td.catcell .category5,
 #torrent-list td.catcell .category6,
-#torrent-list td.catcell .category7 {
+#torrent-list td.catcell .category7,
+#torrent-list td.catcell .category8 {
   background-image: none;
   text-align: center;
   height: auto;
@@ -145,7 +146,8 @@
 #torrent-list td.catcell .category4:after,
 #torrent-list td.catcell .category5:after,
 #torrent-list td.catcell .category6:after,
-#torrent-list td.catcell .category7:after {
+#torrent-list td.catcell .category7:after,
+#torrent-list td.catcell .category8:after {
   font-weight: bold;
   padding: 1px 3px 2px 3px;
   border-radius: 3px;
@@ -179,9 +181,14 @@
   content: "XXX";
   background-color: crimson;
 }
+#torrent-list td.catcell .category8:after {
+  content: "Misc";
+  background-color: dodgerblue;
+}
 /* Medium */
 #torrent-list td.catcell .medium1,
 #torrent-list td.catcell .medium3,
+#torrent-list td.catcell .medium4,
 #torrent-list td.catcell .medium5,
 #torrent-list td.catcell .medium6 {
   background-image: none;
@@ -194,6 +201,9 @@
 #torrent-list td.catcell .medium3:after {
   content: "Encode";
 }
+#torrent-list td.catcell .medium4:after {
+  content: "Capture";
+}
 #torrent-list td.catcell .medium5:after {
   content: "Remux";
 }
@@ -201,9 +211,13 @@
   content: "Web-DL";
 }
 /* Codec */
+#torrent-list td.catcell#codec0,
 #torrent-list td.catcell#codec1,
+#torrent-list td.catcell#codec2,
 #torrent-list td.catcell#codec3,
-#torrent-list td.catcell#codec5 {
+#torrent-list td.catcell#codec4,
+#torrent-list td.catcell#codec5,
+#torrent-list td.catcell#codec6 {
   background-image: none;
   text-align: center;
   height: auto;
@@ -211,11 +225,20 @@
 #torrent-list td.catcell#codec1:before {
   content: "H.264";
 }
+#torrent-list td.catcell#codec2:before {
+  content: "MPEG-2";
+}
 #torrent-list td.catcell#codec3:before {
   content: "VC-1";
 }
+#torrent-list td.catcell#codec4:before {
+  content: "XviD";
+}
 #torrent-list td.catcell#codec5:before {
   content: "HEVC";
+}
+#torrent-list td.catcell#codec6:before {
+  content: "VP9";
 }
 /* Links */
 #torrent-list td .js-download,
