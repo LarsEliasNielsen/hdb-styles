@@ -80,6 +80,9 @@
   order: 0;
   flex: 1 0 100%;
 }
+#torrent-list td:nth-child(3) br {
+  display: none;
+}
 #torrent-list td:nth-child(3) .tag.new,
 #torrent-list td:nth-child(3) a[href="/browse.php?origin=1"] {
   height: 100%;
@@ -125,6 +128,9 @@
   color: var(--internalColor);
 }
 /* Categories */
+#torrent-list td.catcell {
+  vertical-align: baseline;
+}
 #torrent-list td.catcell a {
   text-decoration: none;
 }
