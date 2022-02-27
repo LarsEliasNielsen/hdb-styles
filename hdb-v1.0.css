@@ -56,12 +56,18 @@
   pointer-events: none;
 }
 #torrent-list {
-  width: 90%;
+  width: 95%;
   border-collapse: initial;
 }
 #torrent-list thead {
   position: sticky;
   top: 0;
+}
+#torrent-list tr.featured:nth-child(even) {
+  background-color: #cfcfe3;
+}
+#torrent-list tr:nth-child(even):not(.featured) {
+  background-color: #aac0d3;
 }
 #torrent-list th,
 #torrent-list td {
