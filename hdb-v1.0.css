@@ -51,9 +51,11 @@
 #torrent-list a.fl::after,
 #torrent-list a[title^="25%"]::after,
 #torrent-list a[title^="50%"]::after {
-  float: right;
   font-size: 10px;
   pointer-events: none;
+  position: absolute;
+  right: 0;
+  display: flex;
 }
 #torrent-list {
   width: 95%;
@@ -62,6 +64,7 @@
 #torrent-list thead {
   position: sticky;
   top: 0;
+  z-index: 99;
 }
 #torrent-list tr.featured:nth-child(even) {
   background-color: #cfcfe3;
@@ -69,29 +72,41 @@
 #torrent-list tr:nth-child(even):not(.featured) {
   background-color: #aac0d3;
 }
-#torrent-list th,
-#torrent-list td {
+#torrent-list th {
   padding: 8px;
 }
 #torrent-list td {
   border: none;
 }
-#torrent-list td:nth-child(3) {
-  display: flex;
-  justify-content: left;
-  flex-wrap: wrap;
-  align-items: baseline;
+/* has a poster */
+#torrent-list td:nth-child(3).browse_td_name_cell  {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 50px repeat(auto-fill, minmax(60px, 1fr));
+  grid-template-columns: 50px min-content min-content min-content min-content min-content min-content auto min-content;
+  align-items: center;
+}
+/* has no poster */
+#torrent-list td:nth-child(3):not(.browse_td_name_cell) {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 50px;
+  align-items: center;
+  height: 60px;
 }
 #torrent-list td:nth-child(3) b {
-  order: 0;
-  flex: 1 0 100%;
+  grid-column: 2 / -1;
+  position: relative;
 }
 #torrent-list td:nth-child(3) br {
   display: none;
 }
 #torrent-list td:nth-child(3) .tag.new,
 #torrent-list td:nth-child(3) a[href="/browse.php?origin=1"] {
-  height: 100%;
+  margin: 0 auto;
+}
+#torrent-list td:nth-child(3) a {
+  width: max-content;
 }
 #torrent-list a.fl::after {
   content: "FREE";
@@ -118,6 +133,14 @@
 #torrent-list tbody tr td:nth-child(4) {
   display: none;
 }
+#torrent-list thead tr th:nth-child(7),
+#torrent-list thead tr th:nth-child(8) {
+  text-align: right;
+}
+#torrent-list tbody tr td:nth-child(8),
+#torrent-list tbody tr td:nth-child(9) {
+  padding-right: 8px;
+}
 #torrent-list tbody tr td button,
 #torrent-list td:hover button.tvdb_button {
   display: none;
@@ -126,6 +149,7 @@
   background-color: var(--internalColor);
   color: rgb(255, 255, 255);
   font-weight: 700;
+  margin: 0;
 }
 #torrent-list a.fl {
   color: var(--freeleechColor);
@@ -134,9 +158,6 @@
   color: var(--internalColor);
 }
 /* Categories */
-#torrent-list td.catcell {
-  vertical-align: baseline;
-}
 #torrent-list td.catcell a {
   text-decoration: none;
 }
@@ -165,6 +186,7 @@
   border-radius: 3px;
   color: white;
 }
+
 #torrent-list td.catcell .category1:after {
   content: "Movie";
   background-color: orange;
@@ -253,9 +275,27 @@
   content: "VP9";
 }
 /* Links */
+#torrent-list td .js-rssadd > img.minicon {
+  margin: 0;
+}
 #torrent-list td .js-download,
 #torrent-list td .js-bookmarkadd,
 #torrent-list td .js-wishlistadd,
 #torrent-list td .genres {
   display: none;
+}
+/* Poster */
+.browse_td_name_cell .browse_imdb_poster {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  z-index: 1;
+  display: block !important;
+  grid-row: 1 / span 2;
+}
+.browse_td_name_cell .browse_imdb_poster > img {
+  height: 60px;
+  width: auto;
 }
